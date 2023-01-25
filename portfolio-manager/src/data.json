@@ -1,0 +1,106 @@
+{
+  "project": [
+    {
+      "projectID": 1,
+      "projectName": "first project",
+      "projectHeadline": "Best app ever",
+      "projectDescription": "here is a detailed description of the project one by iknite space",
+      "projectDemoImages": [],
+      "projectContributors": [1, 2, 3, 4, 5],
+      "projectStatus": "finished",
+      "projectLevel": "Engineers",
+      "projectLinks": []
+    },
+    {
+      "projectID": 2,
+      "projectName": "second project",
+      "projectHeadline": "The app you've been looking for",
+      "projectDescription": "here is a detailed description of the project two by iknite space",
+      "projectDemoImages": [],
+      "projectContributors": [2, 3, 4, 5, 6],
+      "projectStatus": "Progress",
+      "projectLevel": "Interns",
+      "projectLinks": []
+    },
+    {
+      "projectID": 3,
+      "projectName": "third project",
+      "projectDescription": "here is a detailed description of the project three by iknite space",
+      "projectDemoImages": [],
+      "projectContributors": [3, 4, 5, 6, 7],
+      "projectStatus": "finished",
+      "projectLevel": "Conception"
+    },
+    {
+      "projectID": 4,
+      "projectName": "fourth project",
+      "projectDescription": "here is a detailed description of the project four by iknite space",
+      "projectDemoImages": [],
+      "projectContributors": [4, 5, 6, 7, 8],
+      "projectStatus": "design",
+      "projectLevel": "Trainees"
+    }
+  ],
+  "member": [
+    {
+      "memberID": 1,
+      "memberName": "iknite1",
+      "memberDepartment": "design",
+      "memberPicture": "",
+      "memberAbout": "there are 10 things you need to know about iknite1",
+      "memberContact": {
+        "email": "iknite1@iknite.space",
+        "phone": "600_111_222",
+        "address": "molyko"
+      },
+      "memberPosition": [
+        {
+          "position": "intern",
+          "dateStart": "01-05-2022",
+          "endStart": "01-05-2022"
+        }
+      ],
+      "memberSkills": [],
+      "memberContributions": [
+        {
+          "projectID": 1,
+          "projectRole": "senior designer"
+        }
+      ],
+      "memberSocials": {
+        "github": "github.com/ikite1",
+        "facebook": "fb.com/ikite1"
+      }
+    },
+    {
+      "memberID": 2,
+      "memberName": "iknite2",
+      "memberDepartment": "design",
+      "memberPicture": "",
+      "memberAbout": "there are 10 things you need to know about iknite2",
+      "memberContact": {
+        "email": "iknite2@iknite.space",
+        "phone": "600_111_222",
+        "address": "Bakweri town"
+      },
+      "memberPosition": [
+        {
+          "position": "intern",
+          "dateStart": "01-05-2022",
+          "endStart": "01-05-2022"
+        }
+      ],
+      "memberSkills": [],
+      "memberContributions": [
+        {
+          "projectID": 2,
+          "projectRole": "senior designer"
+        }
+      ],
+      "memberSocials": {
+        "github": "github.com/ikite2",
+        "facebook": "fb.com/ikite2"
+      }
+    }
+  ]
+}

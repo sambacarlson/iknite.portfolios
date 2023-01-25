@@ -1,13 +1,24 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+// import { Routes, Route } from 'react-router-dom';
+// import { Home } from './pages/Home';
+// import { About } from './pages/About';
+// import { Members } from './pages/Members';
+import { Projects } from './pages/Projects';
+
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl">Hello world!</h1>
-      <Routes>
-        <Route path='/' element={''}/> 
-      </Routes>
+      <Navbar />
+      {/* <Members /> */}
+      <Projects />
+      {/* <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/about' element={<About />}/>
+      </Routes> */}
+      <Footer />
     </div>
 
   );
