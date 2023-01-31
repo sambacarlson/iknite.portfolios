@@ -1,16 +1,21 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
+  const userInfo = useSelector((state:any)=>state.member.memberInfo)
+  const projectInfo = useSelector((state:any)=>state.project.projectInfo)
   return (
     <div className='bg-white w-full h-full flex flex-col mb-6 '>
-      <div id="hero" className="relative bg-dark h-96 text-light grid grid-cols-5 px-4 items-center">
+      <div id="hero" className="relative bg-dark h-full text-light grid grid-cols-5 px-4 items-center">
         <div className='absolute w-full h-full opacity-10'>
           <img src="assets/arts/techtree.png" alt="tech tree" className='object-cover w-full h-full' />
         </div>
-        <h2 className="col-span-2 text-white text-5xl font-bold z-10">Kick-Start Your Career</h2>
-        <div className='col-span-3 z-10'>
-          <img src='assets/arts/globe.png' alt="hero"  className='w-[50vw] h-[50vw] md:w-[350px] md:h-[350px] object-cover'/>
+        <div className='col-span-2 z-10 flex flex-col justify-center items-center pl-6 h-full w-full'>
+          <h2 className="text-white text-4xl font-bold md:text-6xl lg:text-8xl lg:pl-12">Kick-Start Your Career</h2>
+        </div>
+        <div className='col-span-3 z-10 flex flex-col items-end'>
+          <img src='assets/arts/globe.png' alt="hero"  className='object-cover w-[50vw] h-[50vw] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-full'/>
         </div>
       </div>
         <p className="text-center font-normal text-black text-base px-4 py-6">Learn from the best, gain experience and convert you knoledge into wealth by delivering solutions</p>
@@ -37,8 +42,8 @@ const Home = () => {
         </div>
       </div>
       <div className='bg-light text-reddish w-full flex flex-col space-y-3 my-3 p-3'>
-        <p className="tex-xl">more info</p>
-        <p className="tex-xl">more info</p>
+        <p className="tex-xl">{userInfo}</p>
+        <p className="tex-xl">{projectInfo}</p>
         <p className="tex-xl">more info</p>
         <p className="tex-xl">more info</p>
       </div>
