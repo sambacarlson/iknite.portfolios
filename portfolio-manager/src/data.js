@@ -1,4 +1,4 @@
-const PORTFORLIO  = {
+export const PORTFORLIO  = {
   "project": [
     {
       "projectID": 1,

@@ -22,10 +22,10 @@ const Navbar = () => {
         </div>
 
         <div onClick={toggle_menu_off} className="hidden md:flex flex-row items-start px-8 justify-center space-x-3 text-sm duration-300">
-          <Link to="/" className='hover:underline active:overline'>Home</Link>
-          <Link to="/members" className='hover:underline active:overline'>Members</Link>
-          <Link to="/projects" className='hover:underline active:overline'>Projects</Link>
-          <Link to="/about" className='hover:underline active:overline'>About</Link>
+          <Link to="/" className='px-2 py-1 ring-0 ring-light hover:ring-2 active:ring-dark'>Home</Link>
+          <Link to="/members" className='px-2 py-1 ring-0 ring-light hover:ring-2 active:ring-dark'>Members</Link>
+          <Link to="/projects" className='px-2 py-1 ring-0 ring-light hover:ring-2 active:ring-dark'>Projects</Link>
+          <Link to="/about" className='px-2 py-1 ring-0 ring-light hover:ring-2 active:ring-dark'>About</Link>
         </div>
         
         <div className='flex flex-row w-1/2 md:w-1/4 items-center justify-end ring-1 ring-dark rounded-sm p-1'>

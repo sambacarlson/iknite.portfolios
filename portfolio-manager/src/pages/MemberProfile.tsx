@@ -4,7 +4,7 @@ import profilePhoto from '../assets/person.svg'
 
 const MemberProfile = () => {
   return (
-    <div className='bg-dark text-light p-5 w-full mx-auto md:w-1/2 md:my-6'>
+    <div className='bg-white text-dark p-5 w-full mx-auto md:w-4/5 md:my-6 lg:w-2/3'>
       <Link to="/members">
       <div className='bg-light w-6 h-6 rounded-full text-dark flex items-center justify-center'>
         <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"/></svg>
@@ -15,15 +15,15 @@ const MemberProfile = () => {
           <img src={profilePhoto} alt="profile" />
         </div>
         <div className='flex flex-col items-center'>
-          <h3 className='text-light text-lg mt-4 md:text-white'>Full Name </h3>
-          <h4 className='text-light md:text-white'><u>designer</u></h4>
+          <h3 className='text-dark text-lg mt-4 md:text-reddish'>Full Name </h3>
+          <h4 className='text-dark md:text-reddish'><u>designer</u></h4>
           <small><i>joined - present</i></small>
         </div>
         
       </div>
 
       {/* DETAILS */}
-      <div className='bg-light text-dark px-5 py-3'>
+      <div className=' text-dark px-5 py-3'>
 
         {/* ABOUT */}
         <div>

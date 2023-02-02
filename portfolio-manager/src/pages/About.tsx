@@ -3,9 +3,9 @@ import ProfileMiniCard from '../components/ProfileMiniCard'
 
   export const About = () => {
   return (
-    <div className='grid grid-cols-3 bg-white my-8 gap-4'>
-      <div className='flex flex-col items-center space-y-3 col-span-3 md:space-y-6 md:col-span-1 md:bg-light md:w-full md:h-full md:justify-center md:mx-4 lg:bg-transparent'>
-        <h3 className='font-bold text-base'>IKNITE.SPACE TEAM</h3>
+    <div className='flex flex-col bg-white my-8  ml-16 space-y-14'>
+      <div className='flex flex-col items-start space-y-4'>
+        <h3 className='font-bold text-3xl'>IKNITE.SPACE</h3>
         <p><i className="font-light bg-light py-1 p-3 rounded-sm md:bg-dark md:text-white">www.iknite.space</i></p>
         <em className='text-sm text-center'>Ground-floor, First Trust building Soppo Buea</em>
         <div className='flex flex-row items-center justify-center space-x-2 mb-4'>
@@ -14,9 +14,8 @@ import ProfileMiniCard from '../components/ProfileMiniCard'
           <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 20 20"><path fill="currentColor" d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699v3.699z"/></svg>
         </div>
         <p><i className="font-light text-white bg-reddish py-1 p-3 rounded-sm">+237 675 834 309</i></p>
-        <div className='bg-[#fefefe] text-center p-4 md:text-start'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At hic accusamus quis a asperiores officiis praesentium nisi consectetur tempore cum.</div>
       </div>
-      <div className='col-span-3 flex flex-col items-center space-y-3 pt-10 md:pt-0 md:col-span-2 md:space-y-0 md:grid md:grid-flow-row md:grid-cols-2 md:place-items-center md:w-full lg:grid-cols-3'>
+      <div className='flex space-y-4 flex-col justify-start md:flex-row md:space-y-0 md:space-x-8'>
         <ProfileMiniCard />
         <ProfileMiniCard />
         <ProfileMiniCard />

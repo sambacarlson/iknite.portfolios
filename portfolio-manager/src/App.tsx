@@ -9,6 +9,10 @@ import { Members } from './pages/Members';
 import ProjectProfile from './pages/ProjectProfile';
 import { Projects } from './pages/Projects';
 
+import { PORTFORLIO } from './data';
+
+console.log(PORTFORLIO)
+
 
 function App() {
   return (

@@ -1,22 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { PORTFORLIO } from "../data";
 
 const initialState = {
-  projectInfo: "project information"
+  ...PORTFORLIO.project
 }
 
 const projectSlice = createSlice({
-  name: "projectaname",
+  name: "project",
   initialState,
   reducers: {
-    get_project:(state, action)=>{
-      state.projectInfo = action.payload
+    create_project: (state, action)=>{
+      state = action.payload
     },
     update_project:(state, action)=>{
-      state.projectInfo = action.payload
+      state = action.payload
+    },
+    delete_project:(state, action)=>{
+      state.splice(action.payload, 1)
     }
   }
 })
 
 export default projectSlice.reducer
-export const {get_project, update_project} = projectSlice.actions
+export const {create_project, update_project, delete_project} = projectSlice.actions
