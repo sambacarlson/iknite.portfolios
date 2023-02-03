@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const ProjectProfile = () => {
+  const location = useLocation()
+  const{from} = location.state
+  // console.log('=>>', from)
+
   return (
     <div className='bg-white text-dark py-5 my-5 mx-auto w-full md:w-4/5 lg:w-2/3'>
       <Link to="/projects" className='bg-light w-6 h-6 mx-5 rounded-full text-dark flex items-center justify-center'>
@@ -9,8 +14,8 @@ const ProjectProfile = () => {
       </Link>
       <div className='mt-6 p-5 flex flex-row items-center justify-between'>
         <div className=''>
-          <h1 className='text-lg, font-bold'>BOHIKOR</h1>
-          <h4 className=''>Best money management app</h4>
+          <h1 className='text-lg, font-bold'>{from.projectName}</h1>
+          <h4 className=''>{from.projectHeadline}</h4>
         </div>
         <div className='h-20 w-20 md:h-28 md:w-28'>
           <img src="assets/arts/earthsurface.jpg" alt="product" className='h-full w-full object-cover rounded-full lg:rounded-sm' />
@@ -35,7 +40,7 @@ const ProjectProfile = () => {
       </div>
       <div className='bg-light bg-opacity-50 w-full h-64 md:h-72'>
         <div className='flex flex-row items-center justify-between px-5 py-1'>
-          <div className="px-1 rounded-sm">Evaluation</div>
+          <div className="px-1 rounded-sm">{from.projectStatus}</div>
           <div className="px-1 rounded-sm">V 1.2</div>
         </div>
         <img src="assets/arts/knowledge.jpg" alt="project" className='h-full w-full object-cover' />
@@ -51,7 +56,7 @@ const ProjectProfile = () => {
         <div>
           <h3 className='text-lg font-bold'>Description</h3>
           <p>
-            This is a very concise, yet very detailed description of the app in question. though it doesn't make much sense
+            {from.projectDescription}
           </p>
         </div>
 

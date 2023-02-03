@@ -1,8 +1,9 @@
-import MemberProfile from "./MemberProfile"
-import { Link } from "react-router-dom"
+
 import ProfileCard from "../components/ProfileCard"
+import { useSelector } from "react-redux"
 
 export const Members = () => {
+  const memberInfo = useSelector((state:any)=>state.member.memberInfo)
   return (
     <div>
       <div className='w-full p-5'>
@@ -20,6 +21,15 @@ export const Members = () => {
           </div>
         </div>
         <div className='w-2/3 pb-8 flex flex-col space-y-10 md:grid grid-flow-row grid-cols-2 md:space-y-0 gap-10 md:place-items-center lg:grid-cols-3'>
+          
+          {
+            memberInfo.map((member:any)=>
+              <ProfileCard 
+                member={member}
+              />
+              )
+          }
+          {/* <ProfileCard />
           <ProfileCard />
           <ProfileCard />
           <ProfileCard />
@@ -27,8 +37,7 @@ export const Members = () => {
           <ProfileCard />
           <ProfileCard />
           <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
+          <ProfileCard /> */}
         </div>  
       </div>
     </div>
