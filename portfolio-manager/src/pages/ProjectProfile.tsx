@@ -9,7 +9,7 @@ const ProjectProfile = () => {
 
   return (
     <div className='bg-white text-dark py-5 my-5 mx-auto w-full md:w-4/5 lg:w-2/3'>
-      <Link to="/projects" className='bg-light w-6 h-6 mx-5 rounded-full text-dark flex items-center justify-center'>
+      <Link to="/projects" className='shadow-round w-6 h-6 mx-5 rounded-full text-dark flex items-center justify-center'>
         <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5" /></svg>
       </Link>
       <div className='mt-6 p-5 flex flex-row items-center justify-between'>
@@ -18,7 +18,7 @@ const ProjectProfile = () => {
           <h4 className=''>{from.projectHeadline}</h4>
         </div>
         <div className='h-20 w-20 md:h-28 md:w-28'>
-          <img src="assets/arts/earthsurface.jpg" alt="product" className='h-full w-full object-cover rounded-full lg:rounded-sm' />
+          <img src={from.projectDemoImages[0]} alt="product" className='h-full w-full object-cover rounded-full lg:rounded-sm' />
         </div>
       </div>
       <div className='flex flex-row items-center justify-center space-x-3 mt-3 mb-1'>
@@ -43,7 +43,7 @@ const ProjectProfile = () => {
           <div className="px-1 rounded-sm">{from.projectStatus}</div>
           <div className="px-1 rounded-sm">V 1.2</div>
         </div>
-        <img src="assets/arts/knowledge.jpg" alt="project" className='h-full w-full object-cover' />
+        <img src={from.projectDemoImages[0]} alt="project" className='h-full w-full object-cover' />
       </div>
       <p className="flex flex-row space-x-3 items-center justify-center py-5 z-10 text-white font-bold">
         <a href="#"><small className='bg-dark bg-opacity-80 hover:bg-opacity-60 ring-1 ring-light p-1 rounded-sm'>Play store</small></a>
