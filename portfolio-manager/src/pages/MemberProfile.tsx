@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import profilePhoto from '../assets/person.svg'
 import { useLocation } from 'react-router-dom'
 
 
@@ -13,13 +12,13 @@ const MemberProfile = () => {
   return (
     <div className='bg-white text-dark p-5 w-full mx-auto md:w-4/5 md:my-6 lg:w-2/3'>
       <Link to="/members">
-      <div className='bg-light w-6 h-6 rounded-full text-dark flex items-center justify-center'>
+      <div className='shadow-round w-6 h-6 rounded-full text-dark flex items-center justify-center'>
         <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"/></svg>
       </div>
       </Link>
       <div className='flex flex-col items-center justify-center my-6 md:flex-row md:space-x-3'>
-        <div className='w-28 h-28 rounded-full bg-white flex items-center justify-center'>
-          <img src={profilePhoto} alt="profile" />
+        <div className='w-28 h-28 bg-white flex items-center justify-center'>
+          <img src={from.memberPicture} alt="profile"  className='rounded-full object-contain'/>
         </div>
         <div className='flex flex-col items-center'>
           <h3 className='text-dark text-lg mt-4 md:text-reddish'>{from.memberName}</h3>

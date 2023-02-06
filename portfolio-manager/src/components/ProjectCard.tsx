@@ -11,7 +11,7 @@ export const ProjectCard = (props:{project:any}) => {
   return (
     <Link to="/projectProfile" state={{from:fromData}} onMouseOver={()=>handleHover(true)} onMouseOut={()=>handleHover(false)} className={`bg-white ${uiColor? 'text-dark' : 'text-reddish'} p-2 m-1 grid grid-cols-3 gap-1 w-full h-full`}>
       <div className='relative col-span-1 bg-light text-dark shadow-toleft'>
-        <img src={testimage} alt="product" className='w-full h-full object-cover' />
+        <img src={props.project.projectDemoImages[0]} alt="product" className='w-full h-full object-cover' />
         <h3 className={`absolute bottom-0 ${uiColor? 'bg-white md:bg-light' : 'bg-light md:bg-white'} bg-opacity-50 md:bg-opacity-50  w-full p-1 text-end font-bold`}>{props.project.projectName.toUpperCase()}</h3>
       </div>
       <div className='col-span-2 p-1 flex flex-col space-y-3 items-center justify-center'>

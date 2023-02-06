@@ -1,5 +1,4 @@
 import React from 'react'
-import testimage from '../assets/testimage.jpeg'
 import { Link } from 'react-router-dom'
 
 const ProfileCard = (props:{member:any}) => {
@@ -14,7 +13,7 @@ const ProfileCard = (props:{member:any}) => {
       {/* below medium screens */}
       <div className='flex flex-row items-center justify-start px-5 space-x-3 md:hidden' >
         <div className='w-28 h-28'>
-          <img src={testimage} alt="profile" className='w-full h-full object-cover' />
+          <img src={props.member.memberPicture} alt="profile" className='w-full h-full object-cover' />
         </div>
         <div className="flex flex-col items-start space-y-2 w-1/2">
           <h3 className={`bg-${uiColor? 'dark' : 'reddish'} text-white pl-1 pr-12 font-bold shadow-tobottom mb-1`}>{props.member.memberName.toUpperCase()}</h3>
@@ -26,7 +25,7 @@ const ProfileCard = (props:{member:any}) => {
       {/* Medium screens and above */}
       <div className='hidden md:flex flex-col items-center justify-start px-5 space-y-3' >
         <div className='w-40 h-48'>
-          <img src={testimage} alt="profile" className='w-full h-full object-cover' />
+          <img src={props.member.memberPicture} alt="profile" className='w-full h-full object-cover' />
         </div>
         <div className="flex flex-col items-start space-y-1 w-full">
           <p className='flex flex-row gap-2 item-center w-full'>
