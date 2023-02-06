@@ -1,8 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import profilePhoto from '../assets/person.svg'
+import { useLocation } from 'react-router-dom'
+
+
 
 const MemberProfile = () => {
+
+  const location = useLocation()
+  const { from } = location.state
+
   return (
     <div className='bg-white text-dark p-5 w-full mx-auto md:w-4/5 md:my-6 lg:w-2/3'>
       <Link to="/members">
@@ -15,9 +22,9 @@ const MemberProfile = () => {
           <img src={profilePhoto} alt="profile" />
         </div>
         <div className='flex flex-col items-center'>
-          <h3 className='text-dark text-lg mt-4 md:text-reddish'>Full Name </h3>
-          <h4 className='text-dark md:text-reddish'><u>designer</u></h4>
-          <small><i>joined - present</i></small>
+          <h3 className='text-dark text-lg mt-4 md:text-reddish'>{from.memberName}</h3>
+          <h4 className='text-dark md:text-reddish'><u>{from.memberDepartment}</u></h4>
+          <small><i>{from.memberPosition[0].dateStart} - {from.memberPosition[0].dateEnd}</i></small>
         </div>
         
       </div>
@@ -32,7 +39,7 @@ const MemberProfile = () => {
             <h3 className='text-lg font-bold'>About</h3>
           </div>
           <p>
-            Software developer with 5 years work experience.fun of music, and traditional festivals
+            {from.memberAbout}
           </p>
           {/* <button className='bg-white px-1'>see all</button> */}
         </div>
@@ -83,9 +90,9 @@ const MemberProfile = () => {
           <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14q.825 0 1.413-.588Q14 12.825 14 12t-.587-1.413Q12.825 10 12 10q-.825 0-1.412.587Q10 11.175 10 12q0 .825.588 1.412Q11.175 14 12 14Zm-4 4h8v-.575q0-.6-.325-1.1q-.325-.5-.9-.75q-.65-.275-1.337-.425Q12.75 15 12 15t-1.438.15q-.687.15-1.337.425q-.575.25-.9.75q-.325.5-.325 1.1Zm10 4H6q-.825 0-1.412-.587Q4 20.825 4 20V4q0-.825.588-1.413Q5.175 2 6 2h8l6 6v12q0 .825-.587 1.413Q18.825 22 18 22Z"/></svg>
             <h3 className='text-lg font-bold'>Contact</h3>
           </div>
-          <p>6555-444-333</p>
-          <p>member@iknite.space</p>
-          <p>9th avenue molyko Buea</p>
+          <p>{from.memberContact.phone}</p>
+          <p>{from.memberContact.email}</p>
+          <p>{from.memberContact.address}</p>
         </div>
 
         <hr className='my-3 bg-dark rounded-full lg:border-2 md:my-6' />

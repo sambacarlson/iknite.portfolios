@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux"
 import { ProjectCard } from "../components/ProjectCard"
 
 export const Projects = () => {
+  const projectInfo = useSelector((state:any)=>state.project.projectInfo)
   return (
     <div className='flex flex-col md:flex-row md:mt-10'>
       <div className='flex flex-col items-center justify-center md:w-1/3 md:justify-start md:border-light md:border-r-2'>
@@ -10,6 +12,16 @@ export const Projects = () => {
         <h1 className='text-2xl font-bold'>Projects</h1>
       </div>
       <div className='flex flex-col justify-center items-center space-y-6 mx-auto px-4 my-6 w-full md:w-1/2 md:mt-0'>
+        
+        {
+          projectInfo.map((project:any)=>
+          <ProjectCard 
+            project={project}
+          />
+          )
+        }
+
+        {/* <ProjectCard />
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
@@ -19,8 +31,7 @@ export const Projects = () => {
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard /> */}
       </div>
       
     </div>
