@@ -9,9 +9,6 @@ const ProjectProfile = () => {
 
   return (
     <div className='bg-white text-dark py-5 my-5 mx-auto w-full md:w-4/5 lg:w-2/3'>
-      <Link to="/projects" className='shadow-round w-6 h-6 mx-5 rounded-full text-dark flex items-center justify-center'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5" /></svg>
-      </Link>
       <div className='mt-6 p-5 flex flex-row items-center justify-between'>
         <div className=''>
           <h1 className='text-lg, font-bold'>{from.projectName}</h1>
@@ -38,17 +35,17 @@ const ProjectProfile = () => {
           <img src="assets/arts/leadership.jpg" alt="project demo" className='h-full w-full object-cover' />
         </div>
       </div>
-      <div className='bg-light bg-opacity-50 w-full h-64 md:h-72'>
+      <div className='bg-light ring-1 ring-light bg-opacity-50 w-full h-64 md:h-72'>
         <div className='flex flex-row items-center justify-between px-5 py-1'>
           <div className="px-1 rounded-sm">{from.projectStatus}</div>
           <div className="px-1 rounded-sm">V 1.2</div>
         </div>
         <img src={from.projectDemoImages[0]} alt="project" className='h-full w-full object-cover' />
       </div>
-      <p className="flex flex-row space-x-3 items-center justify-center py-5 z-10 text-white font-bold">
-        <a href="#"><small className='bg-dark bg-opacity-80 hover:bg-opacity-60 ring-1 ring-light p-1 rounded-sm'>Play store</small></a>
-        <a href="#"><small className='bg-dark bg-opacity-80 hover:bg-opacity-60 ring-1 ring-light p-1 rounded-sm'>App store</small></a>
-        <a href="#"><small className='bg-dark bg-opacity-80 hover:bg-opacity-60 ring-1 ring-light p-1 rounded-sm'>bohikor.com</small></a>
+      <p className="flex flex-row space-x-3 items-center justify-center py-5 z-10 text-light">
+        <a href="#"><small className='bg-dark ring-1 hover:ring-light p-1 rounded-sm'>Play store</small></a>
+        <a href="#"><small className='bg-dark ring-1 hover:ring-light p-1 rounded-sm'>App store</small></a>
+        <a href="#"><small className='bg-dark ring-1 hover:ring-light p-1 rounded-sm'>Website</small></a>
       </p>
       <div className='px-5'>
         <p></p>
