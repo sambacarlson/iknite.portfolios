@@ -11,7 +11,7 @@ export const Projects = () => {
         </div>
         <h1 className='text-2xl font-bold'>Projects</h1>
       </div>
-      <div className='flex flex-col justify-center items-center space-y-6 mx-auto px-4 my-6 w-full md:w-1/2 md:mt-0'>
+      <div className='flex flex-col justify-center items-center space-y-6 mx-auto px-1 my-6 w-full md:w-1/2 md:mt-0'>
         
         {
           projectInfo.map((project:any)=>
